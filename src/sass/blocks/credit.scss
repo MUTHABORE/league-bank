@@ -1,18 +1,78 @@
 .credit {
-	background: #a7abf7;
-	min-height: 400px;
+	position: relative;
+	height: 400px;
+	background-color: #2C36F2;
+	background-image: linear-gradient(180.24deg, rgba(32, 39, 179, 0) 32.89%, #2027B3 99.79%);
 }
 
 .credit__container {
-	display: flex;
-	width: 1195px;
+	height: 100%;
+	width: 1170px;
 	margin: 0 auto;
 }
 
+.credit__background {
+	position: absolute;
+	left: calc(50% - 532px);
+	height: 100%;
+	width: 917px;
+
+	background-color: #2C36F2;
+
+	&::before {
+		content: "";
+		display: inline-block;
+		position: absolute;
+
+		width: 150px;
+		height: 269px;
+		bottom: 0;
+		
+		background: linear-gradient(183.47deg, rgba(56, 65, 255, 0) 66.3%, #3841FF 97.14%);
+	}
+
+	&::after {
+		content: "";
+		display: inline-block;
+	position: absolute;
+
+		width: 270px;
+		height: 269px;
+		right: 0;
+		bottom: 0;
+		
+		background: linear-gradient(183.47deg, rgba(56, 65, 255, 0) 27.26%, #3841FF 97.14%);
+	}
+}
 
 .credit__block {
-	margin: 100px 0;
-	margin-left: 183px;
+	position: relative;
+	margin-left: 170px;
+	padding-top: 100px;
+	z-index: 3;
+	
+	&::before {
+		content: "";
+		display: inline-block;
+		position: absolute;
+
+		width: 335px;
+		height: 228px;
+		top: 61px;
+		left: 540px;
+		background-image: url("../../img/white-card.png");
+	}
+	&::after {
+		content: "";
+		display: inline-block;
+		position: absolute;
+
+		width: 335px;
+		height: 228px;
+		left: 431px;
+		top: 120px;
+		background-image: url("../../img/black-card.png");
+	}
 }
 
 .credit__title {
@@ -28,13 +88,13 @@
 
 	font-size: 22px;
 	color: rgba(224, 225, 234, 1);
-  line-height: 42px;
+	line-height: 42px;
 }
 
 .credit__button {
 	display: inline-block;
 
-	margin-top: 25px;
+	margin-top: 27px;
 	padding: 0 36px;
 
 	line-height: 54px;
@@ -45,36 +105,4 @@
 
 	background-color: #F6F7FF;
 	border-radius: 4px;
-}
-
-.credit__cards {
-	display: inline-block;
-	width: 444px;
-	height: 400px;
-
-	margin-left: 158px;
-
-	&::before {
-		content: "";
-		display: inline-block;
-    position: relative;
-
-		width: 335px;
-		height: 228px;
-		top: 61px;
-    right: -109px;
-		background-image: url("../../img/white-card.png");
-	}
-	&::after {
-		content: "";
-		display: inline-block;
-    position: relative;
-
-		width: 335px;
-		height: 228px;
-    left: 0;
-		top: -113px;
-		background-image: url("../../img/black-card.png");
-		z-index: 1;
-	}
 }

@@ -21,7 +21,7 @@
 		&::before {
 		content: "";
 		display: block;
-    position: absolute;
+		position: absolute;
 
 		width: 53px;
 		height: 18px;
@@ -35,7 +35,7 @@
 	&::after {
 		content: "";
 		display: block;
-    position: absolute;
+		position: absolute;
 
 		width: 53px;
 		height: 18px;
@@ -75,7 +75,7 @@
 	color: rgba(31, 30, 37, 1);
 }
 
-.converter__input{
+.converter__input {
 	box-sizing: border-box;
 	text-align: center;
 	width: 390px;
@@ -86,12 +86,26 @@
 	font-weight: 500;
 	color: rgba(0, 0, 0, 1);
 	line-height: 54px;
+	
+	border: 1px solid #1F1E25;
+	border-radius: 4px;
+}
 
-	&::-webkit-input-placeholder {
-		color: rgba(0, 0, 0, 1);
-	}
-	&::-moz-placeholder {
-		color: rgba(0, 0, 0, 1);
+.converter__select-arrow {
+	position: relative;
+
+	&::after {
+	content: "";
+	display: block;
+	position: absolute;
+
+	width: 18px;
+	height: 11px;
+
+	top: 0;
+	right: 16px;
+	background-image: url("../../img/arrow-select.svg");
+	background-repeat: no-repeat;
 	}
 }
 
@@ -99,43 +113,55 @@
 	width: 120px;
 	box-sizing: border-box;
 
-	padding-left: 13px;
+	padding-left: 17px;
 
 	font-size: 30px;
 	font-weight: 400;
 	color: rgba(0, 0, 0, 1);
-	line-height: 54px;
-
-	// &::after {
-	// 	content: "";
-	// 	display: block;
-  //   position: relative;
-
-	// 	width: 18px;
-	// 	height: 11px;
-
-	// 	top: 0;
-	// 	right: 0;
-	// 	// left: 0;
-	// 	background-image: url("../../img/arrow-select.svg");
+	line-height: 59px;
 	
-	// }
+	border: 1px solid #1F1E25;
+	border-radius: 4px;
 
-	// -webkit-appearance: none;
-	// -moz-appearance: none;
-	// appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 }
 
 .converter__calendar {
+	position: relative;
 	box-sizing: border-box;
 	text-align: center;
 
 	width: 390px;
+	padding-top: 5px;
+	padding-right: 65px;
 
 	font-size: 24px;
 	font-weight: 400;
 	color: rgba(0, 0, 0, 1);
-	line-height: 54px;
+	line-height: 52px;
+	
+	border: 1px solid #1F1E25;
+	border-radius: 4px;
+}
+
+.converter__calendar-image {
+	position: relative;
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+	
+		width: 41px;
+		height: 44px;
+	
+		top: -19px;
+		right: 19px;
+
+		background-image: url("../../img/calendar.svg");
+		background-repeat: no-repeat;
+	}
 }
 
 .converter__submit {
