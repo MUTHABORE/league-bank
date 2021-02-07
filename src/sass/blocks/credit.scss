@@ -1,0 +1,80 @@
+.credit {
+	background: #a7abf7;
+	min-height: 400px;
+}
+
+.credit__container {
+	display: flex;
+	width: 1195px;
+	margin: 0 auto;
+}
+
+
+.credit__block {
+	margin: 100px 0;
+	margin-left: 183px;
+}
+
+.credit__title {
+	margin: 0;
+
+	font-size: 54px;
+	font-weight: 700;
+	color: rgba(246, 247, 255, 1);
+}
+
+.credit__text {
+	margin: 0;
+
+	font-size: 22px;
+	color: rgba(224, 225, 234, 1);
+  line-height: 42px;
+}
+
+.credit__button {
+	display: inline-block;
+
+	margin-top: 25px;
+	padding: 0 36px;
+
+	line-height: 54px;
+	font-size: 18px;
+	font-weight: 500;
+	color: rgba(31, 30, 37, 1);
+	text-decoration: none;
+
+	background-color: #F6F7FF;
+	border-radius: 4px;
+}
+
+.credit__cards {
+	display: inline-block;
+	width: 444px;
+	height: 400px;
+
+	margin-left: 158px;
+
+	&::before {
+		content: "";
+		display: inline-block;
+    position: relative;
+
+		width: 335px;
+		height: 228px;
+		top: 61px;
+    right: -109px;
+		background-image: url("../../img/white-card.png");
+	}
+	&::after {
+		content: "";
+		display: inline-block;
+    position: relative;
+
+		width: 335px;
+		height: 228px;
+    left: 0;
+		top: -113px;
+		background-image: url("../../img/black-card.png");
+		z-index: 1;
+	}
+}
