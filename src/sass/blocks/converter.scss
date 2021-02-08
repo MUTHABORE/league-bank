@@ -29,7 +29,7 @@
 		bottom: 33px;
 
 		left: calc(50% - 24px);
-		background-image: url("../../img/changing-arrow.svg");
+		background-image: url("../img/changing-arrow.svg");
 	}
 
 	&::after {
@@ -44,7 +44,7 @@
 
 		left: calc(50% - 21px);
 		transform: rotate(180deg);
-		background-image: url("../../img/changing-arrow.svg");
+		background-image: url("../img/changing-arrow.svg");
 	}
 }
 
@@ -104,7 +104,7 @@
 
 	top: 0;
 	right: 16px;
-	background-image: url("../../img/arrow-select.svg");
+	background-image: url("../img/arrow-select.svg");
 	background-repeat: no-repeat;
 	}
 }
@@ -159,7 +159,7 @@
 		top: -19px;
 		right: 19px;
 
-		background-image: url("../../img/calendar.svg");
+		background-image: url("../img/calendar.svg");
 		background-repeat: no-repeat;
 	}
 }
