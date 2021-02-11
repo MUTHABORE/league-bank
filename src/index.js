@@ -1,19 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {createStore} from 'redux';
+import {createStore, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
-import rootReducer from './store/rootReducer';
+import thunk from 'redux-thunk';
 
+import {fetchChosenExchangeRates} from './store/api-actions';
+import {createAPI} from './services/api';
+import rootReducer from './store/rootReducer';
 import App from './components/app';
 import './sass/style.scss';
 
+const api = createAPI();
+
 const store = createStore(
-	rootReducer,
+  rootReducer,
+  applyMiddleware(thunk.withExtraArgument(api)),
 );
 
-ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  document.getElementById('root')
-);
+Promise.all([
+  store.dispatch(fetchChosenExchangeRates(new Date())),
+])
+.then(() => {
+  ReactDOM.render(
+    <Provider store={store}>
+      <App />
+    </Provider>,
+    document.getElementById('root')
+  )
+})
+// .catch(() => swal(`Something went wrong.`));

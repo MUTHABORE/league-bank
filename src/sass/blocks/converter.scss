@@ -14,7 +14,7 @@
 	
 	margin: 0;
 	padding: 0;
-	margin-bottom: 85px;
+	margin-bottom: 84px;
 
 	border: none;
 
@@ -86,13 +86,24 @@
 	font-weight: 500;
 	color: rgba(0, 0, 0, 1);
 	line-height: 54px;
+
+	background-color: rgba(255, 255, 255, 0);
 	
 	border: 1px solid #1F1E25;
 	border-radius: 4px;
+
+	-moz-appearance: textfield;
+
+	&::-webkit-outer-spin-button,
+	&::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
 }
 
 .converter__select-arrow {
 	position: relative;
+	z-index: -1;
 
 	&::after {
 	content: "";
@@ -120,8 +131,10 @@
 	color: rgba(0, 0, 0, 1);
 	line-height: 59px;
 	
+	background-color: rgba(255, 255, 255, 0);
 	border: 1px solid #1F1E25;
 	border-radius: 4px;
+	z-index: -2;
 
 	-webkit-appearance: none;
 	-moz-appearance: none;
@@ -133,21 +146,21 @@
 	box-sizing: border-box;
 	text-align: center;
 
+	height: 60px;
 	width: 390px;
 	padding-top: 5px;
 	padding-right: 65px;
-
+	
 	font-size: 24px;
 	font-weight: 400;
 	color: rgba(0, 0, 0, 1);
 	line-height: 52px;
 	
+	background-color: #fff;
+
 	border: 1px solid #1F1E25;
 	border-radius: 4px;
-}
 
-.converter__calendar-image {
-	position: relative;
 	&::after {
 		content: "";
 		display: block;
@@ -156,8 +169,8 @@
 		width: 41px;
 		height: 44px;
 	
-		top: -19px;
-		right: 19px;
+		top: 5px;
+		right: 18px;
 
 		background-image: url("../img/calendar.svg");
 		background-repeat: no-repeat;

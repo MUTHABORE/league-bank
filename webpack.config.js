@@ -2,6 +2,7 @@ const path = require('path');
 
 module.exports = {
 entry: './src/index.js',
+mode: 'production',
 output: {
   filename: 'bundle.js',
   path: path.resolve(__dirname, 'public')
@@ -9,7 +10,7 @@ output: {
 devServer: {
   contentBase: path.resolve(__dirname, 'public'),
   open: false,
-  port: 1337,
+  port: 3000,
   historyApiFallback: true,
 },
 module: {
@@ -32,7 +33,6 @@ module: {
     },
     {
       test: /\.css$/i,
-      exclude: /node_modules/,
       use: [
         "style-loader",
         "css-loader",

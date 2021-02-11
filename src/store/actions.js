@@ -5,22 +5,22 @@ export const ActionType = {
   SAVE_CONVERTATION: `SAVE_CONVERTATION`,
 };
 
-export const changeExchangeRates = (exchangeRates) => ({
+export const changeExchangeRatesAction = (exchangeRates) => ({
   type: ActionType.CHANGE_EXCHANGE_RATES,
   payload: exchangeRates,
 })
 
-export const changeDate = (chosenDate) => ({
+export const changeDateAction = (chosenDate) => ({
   type: ActionType.CHANGE_DATE,
   payload: chosenDate,
 });
 
-export const clearHistory = (history) => ({
+export const clearHistoryAction = () => ({
   type: ActionType.CLEAR_HISTORY,
-  payload: history,
+  payload: [],
 });
 
-export const saveConvertation = (convertation) => ({
+export const saveConvertationAction = (convertation) => ({
   type: ActionType.SAVE_CONVERTATION,
   payload: convertation,
 });

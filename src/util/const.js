@@ -5,3 +5,7 @@ export const RATES = {
   GBP: `GBP`,
   CNY: `CNY`,
 };
+
+export const HISTORY_MAX_LENGTH = 10;
+
+export const CURRENCY_TYPES = [`USD`,`EUR`, `RUB`, `GBP`, `CNY`];

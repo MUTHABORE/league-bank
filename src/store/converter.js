@@ -1,13 +1,10 @@
 import {extend} from '../util/utils';
 import {ActionType} from './actions';
+import moment from 'moment';
 
 const initialState = {
-  exchangeRates: 10,
-  // exchangeRates: chosenExchangeRates,
-  // firstCurrencyType: CURRENCY_TYPES.RUB,
-  // secoundCurrencyType: CURRENCY_TYPES.USD,
-  // firstCurrencyValue: ``,
-  // secoundCurrencyValue: ``,
+  chosenDate: moment().format(`YYYY-MM-DD`),
+  exchangeRates: {},
 };
 
 const converter = (state = initialState, action) => {
@@ -15,6 +12,10 @@ const converter = (state = initialState, action) => {
     case ActionType.CHANGE_EXCHANGE_RATES:
       return extend(state, {
         exchangeRates: action.payload,
+      });
+    case ActionType.CHANGE_DATE:
+      return extend(state, {
+        chosenDate: action.payload,
       });
     };
   return state;
