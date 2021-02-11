@@ -48,7 +48,7 @@
 .credit__block {
 	position: relative;
 	margin-left: 170px;
-	padding-top: 100px;
+	padding-top: 101px;
 	z-index: 3;
 	
 	&::before {
@@ -59,7 +59,7 @@
 		width: 335px;
 		height: 228px;
 		top: 61px;
-		left: 540px;
+		left: 539px;
 		background-image: url("../img/white-card.png");
 	}
 	&::after {
@@ -69,8 +69,8 @@
 
 		width: 335px;
 		height: 228px;
-		left: 431px;
-		top: 120px;
+		left: 430px;
+		top: 119px;
 		background-image: url("../img/black-card.png");
 	}
 }
@@ -88,7 +88,7 @@
 
 	font-size: 22px;
 	color: rgba(224, 225, 234, 1);
-	line-height: 42px;
+	line-height: 40px;
 }
 
 .credit__button {
@@ -97,7 +97,7 @@
 	margin-top: 27px;
 	padding: 0 36px;
 
-	line-height: 54px;
+	line-height: 53px;
 	font-size: 18px;
 	font-weight: 500;
 	color: rgba(31, 30, 37, 1);
